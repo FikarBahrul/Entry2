@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Undertale Login</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+    body {
+      background-color: black;
+      color: white;
+      font-family: 'Press Start 2P', cursive;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+    input {
+      margin-top: 20px;
+      padding: 10px;
+      font-family: 'Press Start 2P', cursive;
+      text-align: center;
+      border: 2px solid white;
+      background: black;
+      color: white;
+      width: 300px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      border: 2px solid white;
+      background: black;
+      color: white;
+      font-family: 'Press Start 2P', cursive;
+      cursor: pointer;
+    }
+    .dialog-box {
+      border: 3px solid white;
+      padding: 20px;
+      text-align: center;
+      width: 80%;
+      max-width: 500px;
+    }
+  </style>
+</head>
+<body>
+  <div class="dialog-box">
+    <p>* Please enter your name.</p>
+    <input type="text" id="nameInput" placeholder="Enter your name">
+    <br>
+    <button onclick="checkName()">Continue</button>
+  </div>
+
+  <script>
+    function checkName() {
+      const name = document.getElementById('nameInput').value.trim();
+      if (name === "Felix Wijaya") {
+        window.location.href = "birthday.html";
+      } else {
+        alert("Kamu bukan Felix :<.");
+      }
+    }
+  </script>
+</body>
+</html>
